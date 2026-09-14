@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Resources - IELTS Preparation Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="main-header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Study Plans & Contact</h1>
+
+        <section>
+            <h2>IELTS Course Price List</h2>
+            <table>
+                <caption>Pricing and Schedule for IELTS Preparation Courses</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Course Type</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Target Band</th>
+                        <th scope="col">Price (USD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Intensive Crash Course</th>
+                        <td>2 Weeks</td>
+                        <td>6.5+</td>
+                        <td>$199</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Standard Preparation</th>
+                        <td>6 Weeks</td>
+                        <td>7.0+</td>
+                        <td>$349</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Advanced Mastery</th>
+                        <td>12 Weeks</td>
+                        <td>8.0+</td>
+                        <td>$599</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="2">Speaking Practice</th>
+                        <td>1 Month (Group)</td>
+                        <td>Any</td>
+                        <td>$99</td>
+                    </tr>
+                    <tr>
+                        <td>1 Month (1-on-1)</td>
+                        <td>Any</td>
+                        <td>$149</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">All courses include access to online mock tests.</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <form action="#" method="GET">
+                <fieldset>
+                    <legend>Request a Free Consultation</legend>
+                    
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="John Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emailAddr">Email Address:</label>
+                        <input type="email" id="emailAddr" name="emailAddr" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="testDate">Target Test Date:</label>
+                        <input type="date" id="testDate" name="testDate" min="2026-09-08">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currentBand">Estimated Current Band:</label>
+                        <input type="number" id="currentBand" name="currentBand" min="0" max="9" step="0.5">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Study Module:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="moduleAcademic" name="studyModule" value="academic" checked>
+                            <label for="moduleAcademic">Academic</label>
+                            
+                            <input type="radio" id="moduleGeneral" name="studyModule" value="general">
+                            <label for="moduleGeneral">General Training</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="themeColor">Profile Color:</label>
+                        <input type="color" id="themeColor" name="themeColor" value="#0044cc">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="extraNotes">Additional Notes:</label>
+                        <textarea id="extraNotes" name="extraNotes" rows="4" maxlength="500"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit">Submit Request</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 IELTS Prep Hub</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,254 @@
+/* 
+CSS Units explanation for report:
+- px: Used for borders and box-shadows where an exact size is preferred regardless of scaling.
+- rem: Used for typography and structural margins/padding to remain responsive to the root font size.
+- %: Used for layout widths to adapt fluidly to the container's size.
+- vh: Used for minimum heights to ensure sections or the body cover the viewport height.
+- em: Used sparingly for spacing relative to an element's own font-size.
+*/
+
+/* Variables with different color formats */
+:root {
+    --primary-color: #0056b3; /* HEX */
+    --secondary-color: rgb(240, 248, 255); /* RGB (AliceBlue) */
+    --accent-color: hsl(39, 100%, 50%); /* HSL (Orange) */
+    --text-color: darkslategray; /* Color Name */
+    --background-color: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 1rem;
+}
+
+/* Header & Navigation */
+#main-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+    color: #111;
+    transform: translateY(-2px); /* Changes more than color */
+}
+
+nav a.active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    border: 2px solid #ccc; /* Box model border */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Typography */
+h1, h2 {
+    font-family: 'Georgia', serif;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-top: 2rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Images & Figures */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1rem 0;
+    display: block;
+}
+
+figure {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+blockquote {
+    border-left: 5px solid var(--primary-color);
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    background-color: #f9f9f9;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background-color: white;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+    caption-side: top;
+}
+
+th, td {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+thead th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #e6f7ff;
+}
+
+tfoot td {
+    font-weight: bold;
+    text-align: center;
+    background-color: #e9ecef;
+}
+
+/* Form Styling */
+fieldset {
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 1.5rem;
+    background-color: white;
+    margin-top: 1rem;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    box-sizing: border-box; /* Includes padding and border in width */
+}
+
+/* Visible focus state */
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--accent-color);
+    border-color: var(--primary-color);
+    background-color: #fffff0; /* slight yellow tint */
+}
+
+.radio-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.radio-group label {
+    display: inline;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--accent-color);
+    color: #111;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* Pushes footer to bottom */
+}
