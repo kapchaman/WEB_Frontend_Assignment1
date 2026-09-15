@@ -9,10 +9,14 @@ CSS Units explanation for report:
 
 /* Variables with different color formats */
 :root {
-    --primary-color: #0056b3; /* HEX */
-    --secondary-color: rgb(240, 248, 255); /* RGB (AliceBlue) */
-    --accent-color: hsl(39, 100%, 50%); /* HSL (Orange) */
-    --text-color: darkslategray; /* Color Name */
+    --primary-color: #0056b3;
+    /* HEX */
+    --secondary-color: rgb(240, 248, 255);
+    /* RGB (AliceBlue) */
+    --accent-color: hsl(39, 100%, 50%);
+    /* HSL (Orange) */
+    --text-color: darkslategray;
+    /* Color Name */
     --background-color: #ffffff;
 }
 
@@ -58,7 +62,8 @@ nav a {
 nav a:hover {
     background-color: var(--accent-color);
     color: #111;
-    transform: translateY(-2px); /* Changes more than color */
+    transform: translateY(-2px);
+    /* changes more than color - more noticable */
 }
 
 nav a.active {
@@ -66,7 +71,7 @@ nav a.active {
     color: var(--primary-color);
 }
 
-/* Main Content */
+/* main content */
 main {
     flex: 1;
     width: 90%;
@@ -74,13 +79,15 @@ main {
     margin: 2rem auto;
     padding: 2rem;
     background-color: var(--secondary-color);
-    border: 2px solid #ccc; /* Box model border */
+    border: 2px solid #ccc;
+    /* Box model border */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Typography */
-h1, h2 {
+/* typography */
+h1,
+h2 {
     font-family: 'Georgia', serif;
     color: var(--primary-color);
 }
@@ -98,7 +105,7 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
-/* Images & Figures */
+/* images & figures */
 img {
     max-width: 100%;
     height: auto;
@@ -129,7 +136,7 @@ blockquote {
     background-color: #f9f9f9;
 }
 
-/* Table Styling */
+/* table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -144,7 +151,8 @@ caption {
     caption-side: top;
 }
 
-th, td {
+th,
+td {
     padding: 1rem;
     border: 1px solid #ccc;
     text-align: left;
@@ -169,7 +177,7 @@ tfoot td {
     background-color: #e9ecef;
 }
 
-/* Form Styling */
+/* form Styling */
 fieldset {
     border: 2px solid var(--primary-color);
     border-radius: 5px;
@@ -205,15 +213,17 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-family: inherit;
-    box-sizing: border-box; /* Includes padding and border in width */
+    box-sizing: border-box;
+    /* includes padding and border in width */
 }
 
-/* Visible focus state */
+/* visible focus state */
 input:focus,
 textarea:focus {
     outline: 2px solid var(--accent-color);
     border-color: var(--primary-color);
-    background-color: #fffff0; /* slight yellow tint */
+    background-color: #fffff0;
+    /* slight yellow tint */
 }
 
 .radio-group {
@@ -250,5 +260,6 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-    margin-top: auto; /* Pushes footer to bottom */
+    margin-top: auto;
+    /* Pushes footer to bottom */
 }
